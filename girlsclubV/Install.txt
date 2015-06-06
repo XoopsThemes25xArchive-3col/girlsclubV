@@ -1,0 +1,13 @@
+#######################
+INSTALLATION
+#######################
+
+
+1) Upload the girlsclub folder to your webserver's XOOPS_ROOT/themes/ directory
+
+2) Enable the "girlsclubII" theme through your site General settings for "Default Theme". *There is no Admin theme for this theme*
+
+3)Enjoy!
+
+Graphic Worx
+www.graphic-worx.com

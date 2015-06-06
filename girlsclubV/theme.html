@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- Theme design by Graphic Worx (www.graphic-worx.com. Please do not remove this credit.-->
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+		<div class="wrapper">
+	<table class="toptable" cellspacing="0" >
+				<tr>
+					<td id="headerbanner" colspan="3">&nbsp<a title="Return to Home Page" href="<{$xoops_url}>" target="_self"><img src="<{$xoops_imageurl}>images/home_icon.gif" alt="Home" height="14" width="16" border="0"></a>&nbsp&nbsp<img src="<{$xoops_imageurl}>images/email_icon.gif" alt="Email" height="14" width="16" border="0"></td>
+				</tr>
+				<tr>
+					<td id="headerlogo" colspan="2"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/header.gif" title="<{$xoops_sitename}>" alt="<{$xoops_sitename}>" height="240" width="725" border="0" />
+					</td>
+					<{if $xoops_showrblock == 1}>
+					<td id="rightcolumn" rowspan="3">
+					<!-- Display right blocks start-->
+        			<!-- Start right blocks loop -->
+        			<{foreach item=block from=$xoops_rblocks}>
+				    <{include file="$xoops_theme/theme_blockright.html"}>
+        			<{/foreach}>
+        			<!-- End right blocks loop -->
+      		</td>
+					<{/if}>
+<!-- Display right blocks end--></td>
+				</tr>
+				<tr>
+					<td id="headerlogo" colspan="2"><{include file="$xoops_theme/theme_usernav.html"}></td>
+				</tr>
+				<tr>
+					<td id="leftcolumn"><!-- Display left blocks start-->
+				<{if $xoops_showlblock == 1}>
+				        			 <!-- Start left blocks loop -->
+        			<{foreach item=block from=$xoops_lblocks}>
+          		<{include file="$xoops_theme/theme_blockleft.html"}>
+        			<{/foreach}>
+        			<!-- End left blocks loop -->
+				</td>
+				<{/if}>
+				<!-- Display left blocks end --></td>
+					<td id="centercolumn">
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+        <table cellspacing="0">
+		<tr>
+			<td id="centerCcolumn" colspan="2">
+			<!-- Start center-center blocks loop -->
+			<{foreach item=block from=$xoops_ccblocks}>
+				<{include file="$xoops_theme/theme_blockcenter_c.html"}>
+			<{/foreach}>
+			<!-- End center-center blocks loop -->
+			</td>
+		</tr>
+		<tr>
+			<td id="centerLcolumn">		
+			<!-- Start center-left blocks loop -->
+			<{foreach item=block from=$xoops_clblocks}>
+				<{include file="$xoops_theme/theme_blockcenter_l.html"}>
+			<{/foreach}>
+			<!-- End center-left blocks loop -->
+			</td>
+			<td id="centerRcolumn">		
+			<!-- Start center-right blocks loop -->
+			<{foreach item=block from=$xoops_crblocks}>
+				<{include file="$xoops_theme/theme_blockcenter_r.html"}>
+			<{/foreach}>
+			<!-- End center-right blocks loop -->
+			</td>
+		</tr>
+        </table>
+        <{/if}>
+        <!-- End display center blocks -->
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+        <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+        <table cellspacing="0">
+        <{if $xoBlocks.page_bottomcenter}>
+		<tr><td id="centerCcolumn" colspan="2">
+			<{foreach from=$xoBlocks.page_bottomcenter item=block}><{include file="$xoops_theme/theme_blockcenter_c.html"}><{/foreach}>
+			</td>
+		</tr>
+		<{/if}>
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+		<tr>
+			<td id="centerLcolumn">
+				<{foreach from=$xoBlocks.page_bottomleft item=block}><{include file="$xoops_theme/theme_blockcenter_l.html"}><{/foreach}>
+			</td>
+			<td id="centerRcolumn">
+				<{foreach from=$xoBlocks.page_bottomright item=block}><{include file="$xoops_theme/theme_blockcenter_r.html"}><{/foreach}>
+			</td>
+		</tr>
+        <{/if}>
+        </table>
+        <{/if}>
+      </td>
+				</tr>
+			</table>
+			
+		<table class="footertable" cellspacing="0">
+    		<tr>
+          		<td id="footerbar">
+					<{$xoops_footer}><br />
+					<!--Please do NOT remove the following credit, per the License Agreement. It is protected by copyright. -->
+					<font size="1">Theme design by <a href="http://www.graphic-worx.com" target="_blank">Graphic Worx</a></font>
+				</td>
+    		</tr>
+  		</table>
+		</div>
+</body>
+</html>
